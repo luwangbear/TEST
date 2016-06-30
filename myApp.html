@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<body ng-app="myApp">
+
+<div ng-controller="myCtrl">
+    Name: <input ng-model="firstname">
+    <h1>{{firstname}}</h1>
+    <h1 ng-click="changeName()">{{firstname}}</h1>
+    Full Name: {{fullName()}}
+    <br>
+    <button ng-click="myFunction()">Click me!</button>
+    <p>{{ count }}</p>
+    <div ng-show="showMe">
+    <h1>Menu:</h1>
+    <div>Pizza</div>
+    <div>Pasta</div>
+    <div>Pesce</div>
+    </div>
+</div>
+
+<div w3-test-directive></div>
+
+<div ng-controller="namesCtrl">
+<ul>
+  <li ng-repeat="x in names">
+    {{ x.name + ', ' + x.country }}
+  </li>
+</ul>
+
+<div ng-controller="customersCtrl"> 
+<ul>
+  <li ng-repeat="x in myData">
+    {{ x.Name + ', ' + x.Country }}
+  </li>
+</ul>
+</div>
+
+
+</div>
+<div ng-app="">
+  <form>
+    First Name: <input type="text" ng-model="firstname">
+  </form>
+  <h1>You entered: {{firstname}}</h1>
+</div>
+
+<p><a href="#/">Main</a></p>
+
+<a href="#red">Red</a>
+<a href="#green">Green</a>
+<a href="#blue">Blue</a>
+
+<div ng-view></div>
+
+
+ <!-- Modules -->
+<script src="module.js"></script>
+<!-- Controllers -->
+<script src="controller.js"></script>
+<!-- Directives -->
+<script src="directive.js"></script>
+</body>
+</html>
+
